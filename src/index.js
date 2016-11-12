@@ -43,7 +43,7 @@ export default function esnext (options = {}) {
 			if ( extensions.indexOf(extname( id )) === -1) return null;
 			if ( !firstpass.test( code ) ) return null;
 
-			const converted = convert(code);
+			const converted = convert(code, options.options);
 
 			return { code: converted.code, map: converted.map};
 		},
